@@ -2,9 +2,17 @@
   "name": "monlycee.js",
   "version": "1.0.0-alpha.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lamnxzp/monlycee.js.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsdown",
-    "dev": "tsdown --watch"
+    "dev": "tsdown --watch",
+    "prepublishOnly": "npm run build"
   },
   "exports": {
     "import": {
