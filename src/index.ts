@@ -1,3 +1,4 @@
 // src/index.ts
 export { MonLyceeClient } from "./client";
-export * from "./types";
+export * from "./modules/auth/types";
+export * from "./modules/mail/types";
