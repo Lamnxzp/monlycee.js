@@ -64,7 +64,7 @@ export class AuthService {
       throw new Error("Failed to obtain CSRF token");
     }
 
-    this.httpClient.cookieJar.addCookie("CSRF_TOKEN|monlycee.net|/", {
+    this.httpClient.cookieJar.addCookie({
       name: "CSRF_TOKEN",
       value: csrfToken,
       path: "/",

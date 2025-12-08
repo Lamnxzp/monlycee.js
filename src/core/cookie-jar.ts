@@ -116,8 +116,12 @@ export class CookieJar {
     );
   }
 
-  public addCookie(key: string, cookie: Cookie): void {
-    this.cookies.set(key, cookie);
+  public addCookie(cookie: Cookie): void {
+    if (cookie.value === "") {
+      this.cookies.delete(this.getCookieKey(cookie));
+    } else {
+      this.cookies.set(this.getCookieKey(cookie), cookie);
+    }
   }
 
   public getNextCreationIndex(): number {
