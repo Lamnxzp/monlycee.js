@@ -1,7 +1,7 @@
 {
   "name": "monlycee.js",
-  "version": "1.0.0-alpha.0",
-  "description": "",
+  "version": "1.0.0-alpha.1",
+  "description": "A simple API wrapper for MonLycée.net",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lamnxzp/monlycee.js.git"
