@@ -1,6 +1,6 @@
 {
   "name": "monlycee.js",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "description": "A simple API wrapper for MonLycée.net",
   "repository": {
     "type": "git",
@@ -9,11 +9,6 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
-    "prepublishOnly": "npm run build"
-  },
   "exports": {
     "import": {
       "types": "./dist/index.d.mts",
@@ -24,6 +19,14 @@
       "default": "./dist/index.js"
     }
   },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "Lamnxzp",
   "license": "MIT",
