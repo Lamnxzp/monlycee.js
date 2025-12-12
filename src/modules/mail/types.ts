@@ -16,9 +16,7 @@ export type MailFolder =
   | "VF_unread"
   | (string & {});
 
-export type SortBy =
-  | 'dateAsc'
-  | 'dateDesc';
+export type SortBy = "dateAsc" | "dateDesc";
 
 export interface GetMailsOptions {
   /**

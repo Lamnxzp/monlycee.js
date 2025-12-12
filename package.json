@@ -22,7 +22,9 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "files": [
     "dist"
@@ -32,6 +34,7 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
+    "prettier": "^3.7.4",
     "tsdown": "^0.17.0"
   },
   "dependencies": {

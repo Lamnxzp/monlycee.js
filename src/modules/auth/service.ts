@@ -1,13 +1,18 @@
 import { HttpClient } from "../../core/http-client";
 import { AuthCredentials } from "./types";
-import { BASE_PSN_URL, BASE_WEBMAIL_API_URL, BASE_ENT_URL, DEFAULT_HEADERS } from "../../core/constants";
+import {
+  BASE_PSN_URL,
+  BASE_WEBMAIL_API_URL,
+  BASE_ENT_URL,
+  DEFAULT_HEADERS,
+} from "../../core/constants";
 
 export class AuthService {
   constructor(private httpClient: HttpClient) {}
 
   /**
    * Authenticates with the MonLycee platform.
-   * 
+   *
    * @param credentials - User authentication credentials
    * @returns Promise that resolves when login is complete
    */
@@ -15,7 +20,7 @@ export class AuthService {
     const { data: html } = await this.httpClient.followRedirects(BASE_PSN_URL, {
       method: "GET",
     });
-    
+
     const formMatch = html.match(/<form[^>]+action="([^"]+)"/);
     if (!formMatch) {
       throw new Error("Impossible de trouver le formulaire de connexion");

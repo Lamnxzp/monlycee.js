@@ -46,15 +46,24 @@ export class HttpClient {
     });
   }
 
-  public async request<T = any>(config: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+  public async request<T = any>(
+    config: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>> {
     return this.axiosInstance.request(config);
   }
 
-  public async get<T = any>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+  public async get<T = any>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>> {
     return this.axiosInstance.get(url, config);
   }
 
-  public async post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+  public async post<T = any>(
+    url: string,
+    data?: any,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<T>> {
     return this.axiosInstance.post(url, data, config);
   }
 

@@ -12,11 +12,16 @@ export class MailService {
 
   /**
    * Retrieves a list of email headers from the user's mailbox.
-   * 
+   *
    * @param options - Options for retrieving emails (folder, sort order, pagination)
    * @returns Array of email header objects
    */
-  async getMails({ folder = "SF_INBOX", sortBy = "dateDesc", page = 1, perPage = 30 }: GetMailsOptions = {}): Promise<any> {
+  async getMails({
+    folder = "SF_INBOX",
+    sortBy = "dateDesc",
+    page = 1,
+    perPage = 30,
+  }: GetMailsOptions = {}): Promise<any> {
     const csrfToken = this.httpClient.cookieJar.getCookie("CSRF_TOKEN")?.value;
 
     // perPage has no limit
