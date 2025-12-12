@@ -14,8 +14,14 @@ MonLycée.net is the Digital Workspace (ENT - *Espace Numérique de Travail*) de
 
 ## Installation
 
-```bash
-npm install monlycee.js@latest    # or use yarn, pnpm, or bun
+```sh
+npm add monlycee.js
+# or
+pnpm add monlycee.js
+# or
+yarn add monlycee.js
+# or
+bun add monlycee.js
 ```
 
 ## Usage Examples
