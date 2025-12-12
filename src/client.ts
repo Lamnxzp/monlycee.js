@@ -1,8 +1,7 @@
 import { HttpClient } from "./core/http-client";
-import { AuthService } from "./modules/auth/service";
-import { MailService } from "./modules/mail/service";
-import { AuthCredentials } from "./modules/auth/types";
-import { GetMailsOptions } from "./modules/mail/types";
+import { AuthService } from "./api/auth";
+import { MailService } from "./api/mail";
+import { AuthCredentials, GetMailsOptions } from "./types";
 
 export class MonLyceeClient {
   private httpClient: HttpClient;

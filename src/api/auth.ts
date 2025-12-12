@@ -1,11 +1,11 @@
-import { HttpClient } from "../../core/http-client";
-import { AuthCredentials } from "./types";
+import { HttpClient } from "../core/http-client";
+import { AuthCredentials } from "../types";
 import {
   BASE_PSN_URL,
   BASE_WEBMAIL_API_URL,
   BASE_ENT_URL,
   DEFAULT_HEADERS,
-} from "../../core/constants";
+} from "../core/constants";
 
 export class AuthService {
   constructor(private httpClient: HttpClient) {}

@@ -1,6 +1,6 @@
-import { HttpClient } from "../../core/http-client";
-import { GetMailsOptions, SortBy } from "./types";
-import { BASE_WEBMAIL_API_URL, DEFAULT_HEADERS } from "../../core/constants";
+import { HttpClient } from "../core/http-client";
+import { GetMailsOptions, SortBy } from "../types";
+import { BASE_WEBMAIL_API_URL, DEFAULT_HEADERS } from "../core/constants";
 
 const SORTBY_CODES: Record<SortBy, number> = {
   dateAsc: 44,

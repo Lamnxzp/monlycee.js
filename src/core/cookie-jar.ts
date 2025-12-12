@@ -1,4 +1,4 @@
-import { Cookie } from "./types";
+import { Cookie } from "../types";
 
 export class CookieJar {
   private cookies: Map<string, Cookie> = new Map();
