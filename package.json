@@ -6,9 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/Lamnxzp/monlycee.js.git"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     "import": {
       "types": "./dist/index.d.mts",
