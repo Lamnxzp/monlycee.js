@@ -14,7 +14,7 @@ export class MailService {
    * Retrieves a list of email headers from the user's mailbox.
    *
    * @param options - Options for retrieving emails (folder, sort order, pagination)
-   * @returns Array of email header objects
+   * @returns Promise resolving to array of email header objects
    */
   async getMails({
     folder = "SF_INBOX",

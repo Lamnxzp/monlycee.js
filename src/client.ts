@@ -6,7 +6,7 @@ export class MonLyceeClient {
   private httpClient: HttpClient;
   public auth: AuthService;
   public mail: MailService;
-  private account: AccountService;
+  public account: AccountService;
 
   constructor() {
     this.httpClient = new HttpClient();
@@ -44,7 +44,7 @@ export class MonLyceeClient {
    * Retrieves a list of email headers from the user's mailbox.
    *
    * @param options - Options for retrieving emails (folder, sort order, pagination)
-   * @returns Array of email header objects
+   * @returns Promise resolving to array of email header objects
    */
   async getMails(options?: GetMailsOptions): Promise<any> {
     return this.mail.getMails(options);
