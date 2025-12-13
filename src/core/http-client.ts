@@ -24,10 +24,25 @@ export class HttpClient {
   private setupInterceptors() {
     // Interceptor to add cookies to requests
     this.axiosInstance.interceptors.request.use((config) => {
-      const cookieHeader = this.cookieJar.getCookieHeader(config.url || "");
+      if (!config.url) return config;
+      const cookieHeader = this.cookieJar.getCookieHeader(config.url);
       if (cookieHeader) {
         config.headers.Cookie = cookieHeader;
       }
+
+      const hostname = new URL(config.url).hostname;
+      if (hostname === "ent.monlycee.net") {
+        // Replicates ent.monlycee.net defaults$2 axios config: xsrfCookieName: "XSRF-TOKEN", xsrfHeaderName: "X-XSRF-TOKEN"
+        // Automatically adds X-XSRF-TOKEN header if a matching XSRF-TOKEN cookie exists
+        const xsrfCookie = this.cookieJar.getMatchingCookie(
+          config.url,
+          "XSRF-TOKEN"
+        );
+        if (xsrfCookie) {
+          config.headers["X-XSRF-TOKEN"] = xsrfCookie.value;
+        }
+      }
+
       return config;
     });
 

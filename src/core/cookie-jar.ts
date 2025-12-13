@@ -116,6 +116,17 @@ export class CookieJar {
     );
   }
 
+  public getMatchingCookie(url: string, name: string): Cookie | undefined {
+    const { hostname, pathname, protocol } = new URL(url);
+    return Array.from(this.cookies.values()).find(
+      (cookie) =>
+        cookie.name === name &&
+        this.isDomainMatch(cookie, hostname) &&
+        this.isPathMatch(cookie, pathname) &&
+        this.isSecurityMatch(cookie, protocol)
+    );
+  }
+
   public addCookie(cookie: Cookie): void {
     if (cookie.value === "") {
       this.cookies.delete(this.getCookieKey(cookie));
